@@ -43,6 +43,7 @@ OpenAffect Lab is built entirely on the **Python standard library** (plus `pytes
 openaffect-lab/
 ├── pyproject.toml
 ├── demo.py                  # Offline counterfactual evaluation demo
+├── generate_dashboard.py    # Standalone HTML dashboard generator (stdlib only)
 ├── scenarios/
 │   └── core.jsonl           # 10 scripted evaluation scenarios
 ├── src/openaffect/
@@ -111,6 +112,13 @@ Run the offline demonstration illustrating counterfactual divergence without nee
 ```bash
 python demo.py
 ```
+
+### 5. Generate and View the Visual Dashboard
+Generate the standalone, offline HTML evaluation dashboard from the saved comparison report:
+```bash
+python generate_dashboard.py
+```
+This script reads `examples/comparison_report.json` using only the Python standard library and generates `dashboard.html` at the repository root. You can open `dashboard.html` locally in any web browser to view interactive KPI cards, side-by-side behavioral dimension progress bars, and scenario-level evidence without any external network dependencies or CDNs.
 
 ---
 
