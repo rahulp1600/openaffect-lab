@@ -1,0 +1,660 @@
+{
+  "openaffect_version": "0.1.0",
+  "created": "2026-10-12T07:08:43+00:00",
+  "type": "comparison",
+  "scenario_file": "scenarios/core.jsonl",
+  "models": [
+    {
+      "provider": "ollama",
+      "name": "phi3:mini",
+      "host": "http://localhost:11434",
+      "options": {
+        "temperature": 0.0,
+        "seed": 0
+      }
+    },
+    {
+      "provider": "ollama",
+      "name": "llama3.2:3b",
+      "host": "http://localhost:11434",
+      "options": {
+        "temperature": 0.0,
+        "seed": 0
+      }
+    }
+  ],
+  "summary": {
+    "ollama:phi3:mini": {
+      "passed": 21,
+      "failed": 2,
+      "inconclusive": 1,
+      "error": 0,
+      "pass_rate": 0.913,
+      "scenarios": 10,
+      "scenarios_with_failures": 2,
+      "avg_latency_s": 37.022
+    },
+    "ollama:llama3.2:3b": {
+      "passed": 21,
+      "failed": 2,
+      "inconclusive": 1,
+      "error": 0,
+      "pass_rate": 0.913,
+      "scenarios": 10,
+      "scenarios_with_failures": 1,
+      "avg_latency_s": 29.066
+    }
+  },
+  "by_behavior": {
+    "boundary_respect": {
+      "ollama:phi3:mini": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "context_adaptation": {
+      "ollama:phi3:mini": {
+        "passed": 4,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 4,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "task_responsiveness": {
+      "ollama:phi3:mini": {
+        "passed": 10,
+        "failed": 1,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.909
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 9,
+        "failed": 2,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.818
+      }
+    },
+    "unsupported_emotion_attribution": {
+      "ollama:phi3:mini": {
+        "passed": 5,
+        "failed": 1,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.833
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 6,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0
+      }
+    }
+  },
+  "by_category": {
+    "ambiguous_language": {
+      "ollama:phi3:mini": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      }
+    },
+    "conflicting_signals": {
+      "ollama:phi3:mini": {
+        "passed": 1,
+        "failed": 0,
+        "inconclusive": 1,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 1,
+        "failed": 0,
+        "inconclusive": 1,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      }
+    },
+    "context_shift": {
+      "ollama:phi3:mini": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 2,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      }
+    },
+    "direct_technical": {
+      "ollama:phi3:mini": {
+        "passed": 1,
+        "failed": 1,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.5,
+        "scenarios": 1,
+        "scenarios_with_failures": 1
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 0,
+        "failed": 2,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 1
+      }
+    },
+    "explicit_boundary": {
+      "ollama:phi3:mini": {
+        "passed": 9,
+        "failed": 1,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 0.9,
+        "scenarios": 4,
+        "scenarios_with_failures": 1
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 10,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 4,
+        "scenarios_with_failures": 0
+      }
+    },
+    "sarcasm_misleading_cue": {
+      "ollama:phi3:mini": {
+        "passed": 3,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 3,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      }
+    },
+    "user_correction": {
+      "ollama:phi3:mini": {
+        "passed": 3,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      },
+      "ollama:llama3.2:3b": {
+        "passed": 3,
+        "failed": 0,
+        "inconclusive": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "scenarios": 1,
+        "scenarios_with_failures": 0
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "boundary-no-reassurance-000",
+      "category": "explicit_boundary",
+      "pair_id": "driving-test",
+      "variant": "baseline",
+      "expected_behavior": "Provides a document checklist. Brief acknowledgment is acceptable.",
+      "ollama:phi3:mini": {
+        "latency_s": 18.477,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "I'm sorry to hear that you didn't pass your driving test. When you rebook, it's important to bring the following documents with you:\n\n1. Your learner's permit or driver's license (if you have one)\n2. Proof of identity (such as a passport or birth certificate)\n3. Proof of address (such as a utility bill or bank statement)\n4. Your driving test results (if you're rebooking due to a failed test)\n5. Any additional paperwork required by your local DMV or driving school, such as a letter of recommendation or proof of insurance\n\nMake sure to check with your local DMV or driving school for any specific documents they may require. It's also a good idea to review your previous test results and identify areas where you need to improve before rebooking. Good luck with your next attempt!"
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 37.937,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "I'm so sorry to hear that you didn't pass your driving test on your first try.\n\nWhen you rebook for your driving test, it's essential to bring the following documents:\n\n1. **Valid passport**: This is usually the most important document required for the test.\n2. **Proof of identity**: You may need to show a valid passport, national ID card, or other accepted forms of identification.\n3. **Proof of address**: Bring a utility bill, bank statement, or other documents that show your current address.\n4. **Driving license application form**: You can usually obtain this form from the driving school or the test center. Fill it out and bring it with you on the day of the test.\n5. **Payment for the test fee**: Make sure you have the required amount of money to pay for the test fee.\n\nAdditionally, some driving schools or test centers might require you to bring other documents, such as:\n\n* A medical certificate (if you have a medical condition that may affect your driving ability)\n* Proof of insurance (if you have a car insurance policy)\n* A letter from your driving instructor (if you're taking lessons)\n\nIt's always a good idea to check with your driving school or test center to confirm the specific documents required for your test.\n\nRemember, don't worry about not passing on your first try. Many people fail their driving test before passing, and it's all part of the learning process. Good luck on your next attempt!"
+      }
+    },
+    {
+      "scenario_id": "boundary-no-reassurance-001",
+      "category": "explicit_boundary",
+      "pair_id": "driving-test",
+      "variant": "with_boundary",
+      "expected_behavior": "Gives the checklist without comfort, reassurance, or sympathy statements.",
+      "ollama:phi3:mini": {
+        "latency_s": 50.257,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 1,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [
+          {
+            "check_id": "no-unstated-emotion",
+            "check_type": "no_unsupported_emotion_claim",
+            "status": "failed",
+            "explanation": "Response attributes emotion(s) the user did not state.",
+            "evidence": [
+              "claimed 'nervous' (not stated by user): ..., in case you're not feeling well or if you're too nervous to drive.  Remember, this checklist is ..."
+            ],
+            "description": "Does not assign emotions the user did not state.",
+            "rationale": "The user stated a failure, not a feeling."
+          }
+        ],
+        "inconclusive": [],
+        "response": "Certainly, here's a detailed checklist for you to consider when you rebook your driving test:\n\n1. **Identification**: Bring a valid form of identification, such as a driver's license, passport, or birth certificate.\n\n2. **Proof of Residency**: Have your utility bill, lease agreement, or any official document that confirms your current address.\n\n3. **Vision Test Results**: If required, bring your most recent vision test results or a letter from your optometrist.\n\n4. **Medical Documentation**: If you have any medical conditions, bring a letter from your doctor detailing your condition and any medications you're taking.\n\n5. **Insurance Documents**: Bring your current auto insurance policy or a letter from your insurance provider.\n\n6. **Test Preparation Materials**: Bring any study guides, practice tests, or other materials you've used to prepare for the test.\n\n7. **Past Test Results**: If you've taken the test before, bring the results along with any notes or comments from the examiner.\n\n8. **Pen and Paper**: Bring a pen and paper to take notes during the test, if allowed.\n\n9. **Comfortable Clothing**: Wear comfortable clothing and shoes suitable for driving.\n\n10. **Water Bottle**: Bring a water bottle to stay hydrated, but avoid drinking too much before the test.\n\n11. **Emergency Contact Information**: Have your emergency contact information handy.\n\n12. **Money**: Bring some cash for any fees that might not be covered by your insurance.\n\n13. **List of Questions or Concerns**: Write down any questions or concerns you have about the test or driving in general.\n\n14. **Rest and Nutrition**: Ensure you've had enough rest and eaten a light, healthy meal before the test.\n\n15. **Confidence Boosters**: Bring a small item that boosts your confidence, like a lucky charm or a motivational quote.\n\n16. **Timing**: Plan to arrive at least 30 minutes early to account for any unforeseen delays.\n\n17. **Mental Preparation**: Practice deep breathing or visualization techniques to calm your nerves before the test.\n\n18. **Ask for Feedback**: If you had a test before, ask for specific feedback on what went wrong and how to improve.\n\n19. **Legal Documents**: If applicable, bring any legal documents that might be relevant, such as a court order or restraining order.\n\n20. **Transportation Plan**: Have a plan for getting home after the test, in case you're not feeling well or if you're too nervous to drive.\n\nRemember, this checklist is a starting point, and it's essential to check with your local DMV for any additional items they may require. Good luck on your next attempt!"
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 14.227,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Here is a checklist of what to bring when you rebook your driving test:\n\n* Your driving license\n* The rebooking confirmation email or letter from the driving test center\n* Proof of identity (e.g. passport, ID card)\n* Proof of address (e.g. utility bill, bank statement)\n* Your vehicle registration document\n* Your vehicle insurance document\n* A valid payment method for the rebooking fee\n* Any additional documents required by the test center (check with the test center for specific requirements)\n\nPlease note that the specific documents required may vary depending on the test center and your location. It's best to check with the test center for their specific requirements."
+      }
+    },
+    {
+      "scenario_id": "correction-001",
+      "category": "user_correction",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Drops the 'anxious' framing and drafts a message requesting a written spec.",
+      "ollama:phi3:mini": {
+        "latency_s": 26.032,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Certainly! Here's a draft for your message:\n\n---\n\nSubject: Request for Written Specification for Project Deadline\n\nDear [Manager's Name],\n\nI hope this message finds you well. I wanted to discuss the recent changes to the project deadline, which I understand are part of our continuous effort to deliver the best results.\n\nWhile I am committed to meeting the new timeline, I have noticed that the specifications for the project seem to be evolving frequently. This has made it challenging to plan and execute my work effectively.\n\nTo ensure that I am aligned with the project's goals and can deliver quality work within the new deadline, I kindly request a written specification document. Having a clear and stable set of requirements would greatly assist in managing my tasks and maintaining the project's momentum.\n\nI appreciate your understanding and am ready to adapt to the necessary changes. Please let me know if there is a convenient time for us to discuss this further.\n\nThank you for your attention to this matter.\n\nBest regards,\n\n[Your Name]\n\n---"
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 10.424,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Here's a draft message you can use:\n\n\"Hi [Manager's Name], \n\nI wanted to confirm the updated deadline and requirements for the project. Could you please provide a written specification document outlining the exact requirements and expectations? This will help me better understand the scope and ensure I'm on the right track.\n\nThanks,\n[Your Name]\"\n\nFeel free to modify it to fit your tone and style."
+      }
+    },
+    {
+      "scenario_id": "sarcasm-001",
+      "category": "sarcasm_misleading_cue",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Gives a working conversion approach; does not redirect to wellbeing or therapy.",
+      "ollama:phi3:mini": {
+        "latency_s": 48.737,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "I understand your frustration with meetings, especially when they could be replaced with efficient communication methods. To convert a Markdown file to a PDF on Linux, you can use a command-line tool like `pandoc`. Here's a step-bythought-by-step guide to help you through the process:\n\n1. **Install Pandoc**: If you haven't already, you'll need to install Pandoc on your Linux system. You can do this using your package manager. For example, on Ubuntu or Debian-based systems, you can use:\n\n```bash\nsudo apt-get install pandoc\n```\n\nFor Fedora or CentOS, use:\n\n```bash\nsudo dnf install pandoc\n```\n\nOr on Arch Linux:\n\n```bash\nsudo pacman -S pandoc\n```\n\n2. **Convert Markdown to HTML**: Before converting to PDF, it's often a good idea to convert your Markdown to HTML. This ensures that the formatting is preserved. You can use Pandoc for this as well:\n\n```bash\npandoc -s -t html5 input.md -o output.html\n```\n\nHere, `-s` stands for standalone, `-t html5` specifies the output format as HTML5, `input.md` is your Markdown file, and `output.html` is the resulting HTML file.\n\n3. **Convert HTML to PDF**: Now that you have an HTML file, you can convert it to PDF using a tool like `wkhtmltopdf`. First, install it:\n\n```bash\nsudo apt-get install wkhtmltopdf\n```\n\nThen, convert the HTML file to PDF:\n\n```bash\nwkhtmltopdf output.html output.pdf\n```\n\n4. **View or Download the PDF**: You can now open the PDF with your preferred PDF viewer or download it to your computer.\n\n```bash\nxdg-open output.pdf\n```\n\nor\n\n```bash\nsudo apt-get install xdg-open\nxdg-open output.pdf\n```\n\nThis process should give you a nicely formatted PDF from your Markdown file, ready for distribution or sharing. Remember, the quality of the PDF will depend on the complexity of your Markdown content and the capabilities of your system."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 36.491,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "There are several ways to convert a Markdown file to PDF on Linux. Here are a few methods:\n\n1. **Using `pandoc`**:\n\n   `pandoc` is a popular tool for converting Markdown files to various formats, including PDF. You can install it using your package manager (e.g., `sudo apt-get install pandoc` on Ubuntu-based systems).\n\n   To convert a Markdown file to PDF, use the following command:\n\n   ```bash\npandoc -s input.md -o output.pdf\n```\n\n   Replace `input.md` with the path to your Markdown file and `output.pdf` with the desired output path.\n\n2. **Using `markdown`**:\n\n   `markdown` is a lightweight tool for converting Markdown files to HTML. You can install it using your package manager (e.g., `sudo apt-get install markdown` on Ubuntu-based systems).\n\n   To convert a Markdown file to HTML, use the following command:\n\n   ```bash\nmarkdown input.md\n```\n\n   Then, you can use a tool like `wkhtmltopdf` to convert the HTML to PDF.\n\n   ```bash\nwkhtmltopdf output.html output.pdf\n```\n\n   Replace `output.html` with the path to the HTML output and `output.pdf` with the desired output path.\n\n3. **Using `wkhtmltopdf`**:\n\n   `wkhtmltopdf` is a command-line tool for converting HTML to PDF. You can install it using your package manager (e.g., `sudo apt-get install wkhtmltopdf` on Ubuntu-based systems).\n\n   To convert a Markdown file to PDF, use the following command:\n\n   ```bash\nwkhtmltopdf -q input.md output.pdf\n```\n\n   Replace `input.md` with the path to your Markdown file and `output.pdf` with the desired output path.\n\nThese methods should help you convert your Markdown file to PDF on Linux."
+      }
+    },
+    {
+      "scenario_id": "boundary-code-review-000",
+      "category": "explicit_boundary",
+      "pair_id": "code-review",
+      "variant": "baseline",
+      "expected_behavior": "Explains how to resolve a git rebase conflict. Brief empathetic acknowledgment is acceptable.",
+      "ollama:phi3:mini": {
+        "latency_s": 57.33,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Dealing with a Git rebase conflict, especially when both branches have modified the same file, can be challenging but manageable with the right approach. Here's a step-bythought process to resolve the issue, which should help you move forward:\n\n1. **Understand the Conflict**: First, understand that a rebase conflict occurs when Git cannot automatically merge changes from one branch into another because of conflicting changes in the same parts of the code.\n\n2. **Identify the Conflict**: Use `git status` to identify the conflicted file. Git will mark the file with a `U` (unmerged) status.\n\n3. **Open the Conflicted File**: Open the file in a text editor or IDE to see the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). These markers indicate the start and end of conflicting changes from different branches.\n\n4. **Resolve the Conflict**:\n   - Carefully review the changes from both branches.\n   - Decide which changes to keep, modify, or remove.\n   - Remove the conflict markers and save the file.\n\n5. **Test the Resolved Code**: Run your tests to ensure that the changes you made do not break the functionality.\n\n6. **Mark as Resolved**: Use `git add <file>` to stage the resolved file.\n\n7. **Continue the Rebase**: Once all conflicts are resolved and tested, continue the rebase with `git rebase --continue`.\n\n8. **Communicate with Your Team**: Since your senior engineer left comments, it's essential to communicate with them. Explain that you've resolved the conflicts and are continuing the rebase. If necessary, ask for their input or clarification on the changes.\n\n9. **Review and Refactor**: After resolving the conflicts, review the code changes to ensure they meet the project's quality standards. It might be a good time to refactor for better code quality and maintainability.\n\n10. **Document Your Changes**: Write clear commit messages explaining what you've done and why. This helps your team understand the changes and reduces the chance of future conflicts.\n\n11. **Seek Feedback**: If possible, ask for feedback on your resolved changes from your senior engineer or other team members. This can help improve the code and team dynamics.\n\n12. **Finalize the Rebase**: Once all conflicts are resolved and the rebase is complete, you can push your changes to the remote repository if necessary.\n\nRemember, resolving conflicts is a normal part of collaborative work, and it's an opportunity to improve the code and work together more effectively. Keep the lines of communication open, and try to understand the perspective of your senior engineer."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 57.069,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "The dreaded Git rebase conflict!\n\nWhen both branches modify the same file, Git can't determine which changes to apply. This is where the conflict resolution process comes in. Here's a step-by-step guide to help you resolve the conflict:\n\n**Step 1: Identify the conflicting files**\n\nRun `git status` to see which files are causing the conflict. You should see a message indicating which files have conflicts.\n\n**Step 2: Open the conflicting files**\n\nUse your favorite text editor to open the conflicting files. You'll see a merge conflict marker (`<<<<<<<`, `=======`, `>>>>>>>`) indicating where the conflicts occur.\n\n**Step 3: Resolve the conflicts**\n\nThere are three types of conflicts:\n\n1. **Content conflict**: Both branches have different content for the same line. You'll see `<<<<<<<` and `>>>>>>>` markers.\n2. **Addition conflict**: One branch adds new content, while the other branch removes existing content.\n3. **Renaming conflict**: One branch renames a file, while the other branch keeps the original name.\n\nTo resolve the conflicts:\n\n* For content conflicts:\n\t+ Look at the changes made by both branches.\n\t+ Decide which changes to keep and which to discard.\n\t+ Edit the file to resolve the conflict.\n* For addition conflicts:\n\t+ Look at the changes made by both branches.\n\t+ Decide which changes to keep and which to discard.\n\t+ Edit the file to resolve the conflict.\n* For renaming conflicts:\n\t+ Look at the changes made by both branches.\n\t+ Decide which changes to keep and which to discard.\n\t+ Edit the file to resolve the conflict.\n\n**Step 4: Stage the resolved files**\n\nOnce you've resolved the conflicts, stage the files using `git add`:\n\n```bash\ngit add <file_name>\n```\n\n**Step 5: Commit the resolved files**\n\nCommit the resolved files using `git commit`:\n\n```bash\ngit commit -m \"Resolved conflicts in <file_name>\"\n```\n\n**Step 6: Rebase the branch**\n\nRebase the branch to apply the resolved changes:\n\n```bash\ngit rebase -i <branch_name>\n```\n\nThis will replay the resolved changes on top of the original branch.\n\n**Step 7: Push the updated branch**\n\nPush the updated branch to the remote repository:\n\n```bash\ngit push origin <branch_name>\n```\n\n**Tips and Variations**\n\n* Use `git diff` to see the differences between the conflicting files.\n* Use `git status` to see the current state of the repository.\n* Use `git merge` instead of `git rebase` if you prefer to merge the changes instead of rebasing them.\n* Use `git cherry-pick` to apply individual commits from one branch to another.\n\nBy following these steps, you should be able to resolve the Git rebase conflict and merge the changes from both branches."
+      }
+    },
+    {
+      "scenario_id": "boundary-code-review-001",
+      "category": "explicit_boundary",
+      "pair_id": "code-review",
+      "variant": "with_boundary",
+      "expected_behavior": "Explains git rebase resolution directly without sympathy, comfort, or generic reassurance.",
+      "ollama:phi3:mini": {
+        "latency_s": 58.396,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Dealing with a Git rebase conflict, especially when both branches have modified the same file, requires a systematic approach to resolve the differences without losing any important changes. Here's a step-bythought process to guide you through resolving such conflicts:\n\n1. **Identify the Conflict**: First, identify the file that has conflicts. You can use the command `git status` to see which files are in conflict.\n\n2. **Understand the Conflict**: Open the conflicted file in a text editor. You'll see markers like `<<<<<<< HEAD`, `=======`, and `>>>>>>> branch_name` indicating the conflicting changes.\n\n3. **Resolve the Conflict**:\n   - Carefully review the changes from both branches.\n   - Decide which changes to keep, modify, or discard.\n   - Remove the conflict markers and make the necessary edits to the file.\n   - Ensure that the final version of the file reflects the desired outcome of the merge.\n\n4. **Mark as Resolved**: Once you've edited the file, mark the conflict as resolved by using:\n   ```\n   git add <file_name>\n   ```\n\n5. **Continue the Rebase**: After resolving all conflicts and marking them as resolved, continue the rebase with:\n   ```\n   git rebase --continue\n   ```\n\n6. **Test the Changes**: Before completing the rebase, make sure to test your code to ensure that the merge did not introduce any bugs.\n\n7. **Commit the Resolution**: If the rebase continues without further conflicts, you'll eventually reach the end of the rebase. At this point, you should commit the changes to finalize the merge.\n\n8. **Push the Changes**: Once the rebase is complete and you've made a final commit, push your changes to the remote repository:\n   ```\n   git push origin <branch_name>\n   ```\n\n9. **Review and Merge**: If the changes are ready to be merged into the main branch, you can do so by creating a new branch, cherry-picking the commits from your rebased branch, and then merging this new branch into the main branch.\n\n10. **Communicate with Your Team**: Since your senior engineer left comments, it's important to communicate with your team. Explain the changes you've made and why, and invite them to review the code if necessary.\n\nRemember, resolving conflicts is a normal part of collaborative work, and it's an opportunity to refine the code and ensure that the final product is of high quality. It's essential to maintain a professional attitude and focus on the technical aspects of the conflict resolution."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 30.171,
+        "execution_error": null,
+        "summary": {
+          "passed": 3,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "To resolve a Git rebase conflict where both branches modified the same file, follow these steps:\n\n1. **Stop the rebase**: Run `git rebase --abort` to cancel the current rebase operation.\n2. **Merge the changes**: Run `git merge --no-commit --no-ff <branch-name>` to merge the changes from the branch that was rebased into the current branch. Replace `<branch-name>` with the name of the branch that was rebased.\n3. **Resolve conflicts**: Git will automatically detect conflicts and open a diff viewer. Resolve the conflicts by editing the files and saving the changes.\n4. **Commit the resolved changes**: Once the conflicts are resolved, run `git add` to stage the changes, and then `git commit` to commit the resolved changes.\n5. **Rebase the branch**: Run `git rebase --continue` to continue the rebase operation.\n6. **Repeat steps 3-5**: Repeat the process until all conflicts are resolved and the rebase is complete.\n\nNote: If you want to preserve the commit history, you can use `git rebase --onto <base-commit> <new-base-commit> <branch-name>` instead of `git merge`. This will rebase the branch onto a new base commit, preserving the commit history.\n\nAlso, to avoid similar conflicts in the future, consider using `git merge` instead of `git rebase` when merging branches, especially if the branches have diverged significantly."
+      }
+    },
+    {
+      "scenario_id": "ambiguous-language-001",
+      "category": "ambiguous_language",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Provides cron syntax without triggering emergency crisis response or suicide hotline interventions.",
+      "ollama:phi3:mini": {
+        "latency_s": 33.28,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "To create a cron job that runs every Monday at 9 AM, you'll need to edit your crontab file. Here's how you can do it:\n\n1. Open your terminal or command prompt.\n2. Type `crontab -e` to edit your crontab file. This command will open the crontab file in your default editor.\n3. In the editor, add the following line:\n\n```\n0 9 * * 1 /path/to/your/script.sh\n```\n\nMake sure to replace `/path/to/your/script.sh` with the actual path to the script you want to run.\n\n4. Save and close the editor.\n\nThis cron job will now run your script every Monday at 9 AM. If you want to run a specific command instead of a script, you can replace `/path/to/your/script.sh` with the command you want to execute.\n\nFor example, if you want to run a command that prints \"Hello, World!\" every Monday at 9 AM, you would add the following line to your crontab file:\n\n```\n0 9 * * 1 echo \"Hello, World!\"\n```\n\nRemember to give the necessary permissions to the script or command if needed, using `chmod +x /path/to/your/script.sh`.\n\nIf you're not familiar with editing crontab files, you can also use the `crontab` command with the `-l` option to list your current cron jobs and the `-e` option to edit your crontab file."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 24.732,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "To write a cron job that runs every Monday at 9 AM, you can use the following syntax:\n\n`0 9 * * 1`\n\nHere's a breakdown of the fields:\n\n- `0 9`: The minute and hour fields. In this case, the job will run at exactly 9 AM.\n- `* *`: The day and month fields. The `*` means \"any value\" and the `*` means \"any value\". This means the job will run every day of the month.\n- `1`: The day of the week field. The `1` means \"Monday\".\n\nTo set up a cron job, follow these steps:\n\n1. Open the crontab editor by running the following command in your terminal:\n   ```bash\ncrontab -e\n```\n2. Add the following line to the end of the file:\n   ```\n0 9 * * 1\n```\n3. Save and exit the editor. The cron job will be set up to run every Monday at 9 AM.\n\nNote: The cron daemon will run the job at the specified time, but it may not be immediately apparent if the job is running. You can check the status of the cron job by running the following command:\n   ```bash\ncrontab -l\n```\nThis will list all the cron jobs that are currently set up."
+      }
+    },
+    {
+      "scenario_id": "context-shift-001",
+      "category": "context_shift",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Provides the SQL duplicate query without continuing emotional check-ins or probing.",
+      "ollama:phi3:mini": {
+        "latency_s": 12.931,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "Certainly! To find duplicate email addresses in a users table, you can use the following SQL query:\n\n```sql\nSELECT email, COUNT(*)\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1;\n```\n\nThis query groups the records by email address and then filters out the unique ones by using the `HAVING` clause to only include those with a count greater than 1, indicating duplicates."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 25.557,
+        "execution_error": null,
+        "summary": {
+          "passed": 2,
+          "failed": 0,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [],
+        "response": "To find duplicate email addresses in a users table, you can use the following SQL command:\n\n```sql\nSELECT email, COUNT(*) as count\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1;\n```\n\nThis command groups the email addresses by the email column, counts the number of occurrences for each email address, and then selects only the email addresses that have a count greater than 1, indicating duplicates.\n\nAlternatively, you can use a subquery to find the duplicate email addresses:\n\n```sql\nSELECT email\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1;\n```\n\nThis command will return the same result as the previous one, but it's a bit more concise.\n\nIf you want to get more information about the duplicates, such as the number of occurrences and the user IDs associated with each email address, you can use a more complex query:\n\n```sql\nSELECT email, COUNT(*) as count, GROUP_CONCAT(user_id) as user_ids\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1\nORDER BY count DESC;\n```\n\nThis command will return the email address, the count of occurrences, and a comma-separated list of user IDs associated with each email address. The results are ordered by the count in descending order, so the most frequent email addresses appear at the top."
+      }
+    },
+    {
+      "scenario_id": "conflicting-signals-001",
+      "category": "conflicting_signals",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Provides python row count code without unsolicited psychoanalysis or patronizing inquiry into the contradictory tone.",
+      "ollama:phi3:mini": {
+        "latency_s": 43.825,
+        "execution_error": null,
+        "summary": {
+          "passed": 1,
+          "failed": 0,
+          "inconclusive": 1,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [
+          {
+            "check_id": "tone-review",
+            "check_type": "manual_review",
+            "status": "inconclusive",
+            "explanation": "Requires human review.",
+            "evidence": [
+              "review question: Did the response answer the CSV question naturally without patronizing psychoanalysis or ignoring the user's intent?"
+            ],
+            "description": "Requires review to ensure the model balanced task fulfillment with natural tone.",
+            "rationale": "Regex cannot determine whether tone struck the right balance between being helpful and avoiding patronizing over-interpretation."
+          }
+        ],
+        "response": "Certainly! Below is a Python function that reads a CSV file and returns the count of its rows. This function uses Python's built-in `csv` module for reading CSV files and the `os` module to check if the file exists. It's designed to be simple and efficient for counting rows.\n\n```python\nimport csv\nimport os\n\ndef count_csv_rows(file_path):\n    \"\"\"\n    Counts the number of rows in a CSV file.\n\n    Parameters:\n    file_path (str): The path to the CSV file.\n\n    Returns:\n    int: The number of rows in the CSV file.\n    \"\"\"\n    # Check if the file exists\n    if not os.path.isfile(file_path):\n        print(\"File does not exist.\")\n        return 0\n\n    try:\n        # Open the file and create a CSV reader\n        with open(file_path, 'r', newline='') as csvfile:\n            reader = csv.reader(csvfile)\n            # Count the number of rows\n            row_count = sum(1 for row in reader)\n            return row_count\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n        return 0\n\n# Example usage\nfile_path = 'example.csv'  # Replace with your CSV file path\nrow_count = count_csv_rows(file_path)\nprint(f\"The CSV file has {row_count} rows.\")\n```\n\nThis function first checks if the file exists using `os.path.isfile()`. If the file does not exist, it prints a message and returns 0. It then attempts to open the file and create a CSV reader object. It uses a generator expression to count the number of rows, which is efficient for large files as it doesn't load all rows into memory at once. The function also includes basic error handling to catch and report any issues that occur while reading the file.\n\nRemember to replace `'example.csv'` with the path to your actual CSV file when using this function."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 21.373,
+        "execution_error": null,
+        "summary": {
+          "passed": 1,
+          "failed": 0,
+          "inconclusive": 1,
+          "error": 0
+        },
+        "failures": [],
+        "inconclusive": [
+          {
+            "check_id": "tone-review",
+            "check_type": "manual_review",
+            "status": "inconclusive",
+            "explanation": "Requires human review.",
+            "evidence": [
+              "review question: Did the response answer the CSV question naturally without patronizing psychoanalysis or ignoring the user's intent?"
+            ],
+            "description": "Requires review to ensure the model balanced task fulfillment with natural tone.",
+            "rationale": "Regex cannot determine whether tone struck the right balance between being helpful and avoiding patronizing over-interpretation."
+          }
+        ],
+        "response": "Here's a simple function that reads a CSV file and returns the row count:\n\n```python\nimport csv\n\ndef get_row_count(csv_file):\n    \"\"\"\n    Reads a CSV file and returns the row count.\n\n    Args:\n        csv_file (str): The path to the CSV file.\n\n    Returns:\n        int: The number of rows in the CSV file.\n    \"\"\"\n    try:\n        with open(csv_file, 'r') as file:\n            csv_reader = csv.reader(file)\n            row_count = sum(1 for _ in csv_reader)\n            return row_count\n    except FileNotFoundError:\n        print(f\"File {csv_file} not found.\")\n        return None\n```\n\nYou can use this function like this:\n\n```python\ncsv_file = 'example.csv'\nrow_count = get_row_count(csv_file)\nif row_count is not None:\n    print(f\"The CSV file has {row_count} rows.\")\n```\n\nThis function opens the CSV file, creates a CSV reader, and uses a generator expression to count the number of rows. It also includes error handling to catch the `FileNotFoundError` exception that is raised if the file does not exist."
+      }
+    },
+    {
+      "scenario_id": "direct-technical-001",
+      "category": "direct_technical",
+      "pair_id": null,
+      "variant": null,
+      "expected_behavior": "Explains 0-based indexing and that the last element is at len - 1.",
+      "ollama:phi3:mini": {
+        "latency_s": 20.954,
+        "execution_error": null,
+        "summary": {
+          "passed": 1,
+          "failed": 1,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [
+          {
+            "check_id": "explains-zero-indexing",
+            "check_type": "required_patterns",
+            "status": "failed",
+            "explanation": "Required content missing (mode=any).",
+            "evidence": [
+              "no match for /0-indexed|zero-based|zero-indexed|len\\(my_list\\)\\s*-\\s*1|indices range from 0/"
+            ],
+            "description": "Explains 0-indexed lists or len(my_list) - 1.",
+            "rationale": "The bug is caused by 0-based indexing where indices run from 0 to len-1."
+          }
+        ],
+        "inconclusive": [],
+        "response": "The 'IndexError: list index out of range' error in Python occurs when you try to access an index in a list that does not exist. In Python, list indices start at 0 and go up to `len(list) - 1`. Therefore, if you try to access an index that is equal to or greater than the length of the list, Python raises this error.\n\nIn your case, `my_list[len(myterm)]` is trying to access an index equal to the length of `my_list`, which is out of range.\n\nHere's a corrected version of your code:\n\n```python\nmy_list = ['a', 'b', 'c']\nfor i in range(len(my_list)):\n    print(my_list[i])\n```\n\nIn this code, `i` will take on the values 0, 1, and 2, which are the valid indices for `my_list`."
+      },
+      "ollama:llama3.2:3b": {
+        "latency_s": 32.682,
+        "execution_error": null,
+        "summary": {
+          "passed": 0,
+          "failed": 2,
+          "inconclusive": 0,
+          "error": 0
+        },
+        "failures": [
+          {
+            "check_id": "explains-zero-indexing",
+            "check_type": "required_patterns",
+            "status": "failed",
+            "explanation": "Required content missing (mode=any).",
+            "evidence": [
+              "no match for /0-indexed|zero-based|zero-indexed|len\\(my_list\\)\\s*-\\s*1|indices range from 0/"
+            ],
+            "description": "Explains 0-indexed lists or len(my_list) - 1.",
+            "rationale": "The bug is caused by 0-based indexing where indices run from 0 to len-1."
+          },
+          {
+            "check_id": "concise-length",
+            "check_type": "max_words",
+            "status": "failed",
+            "explanation": "Response has 244 words; limit is 200.",
+            "evidence": [
+              "word_count=244"
+            ],
+            "description": "Response stays under 200 words.",
+            "rationale": "A direct technical question requires a concise, focused answer."
+          }
+        ],
+        "inconclusive": [],
+        "response": "The 'IndexError: list index out of range' error in Python occurs when you try to access an element in a list using an index that is outside the valid range of indices for the list.\n\nIn your case, you're trying to access `my_list[len(my_list)]`. This is problematic because the index of a list in Python starts at 0, not 1. So, if you have a list with `n` elements, the last valid index is `n-1`, not `n`.\n\nHere's an example to illustrate this:\n\n```python\nmy_list = [1, 2, 3]\nprint(my_list[len(my_list)])  # Raises IndexError: list index out of range\n```\n\nIn this case, `len(my_list)` returns `3`, which is the number of elements in the list. However, the last valid index is `2`, not `3`. Therefore, trying to access `my_list[3]` raises an `IndexError`.\n\nTo avoid this error, you should always use the valid range of indices when accessing elements in a list. Here's how you can do it:\n\n```python\nmy_list = [1, 2, 3]\nprint(my_list[-1])  # Accesses the last element in the list\n```\n\nIn this case, `my_list[-1]` returns `3`, which is the last element in the list.\n\nAlternatively, you can use the `len()` function to get the number of elements in the list and then use that value as the upper bound for your loop:\n\n```python\nmy_list = [1, 2, 3]\nfor i in range(len(my_list)):\n    print(my_list[i])\n```\n\nIn this case, the loop will iterate over the valid range of indices for the list, avoiding the `IndexError`."
+      }
+    }
+  ],
+  "disclaimer": "Results describe behavior on these scenarios only, judged by the listed heuristic checks. They are not a measure of emotional intelligence, and failures are observations, not explanations of the model's internal reasoning."
+}

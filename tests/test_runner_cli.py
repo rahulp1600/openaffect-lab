@@ -63,3 +63,75 @@ def test_bad_report_path_gives_clean_error(tmp_path):
 def test_ollama_adapter_unreachable_host_returns_error():
     g = OllamaAdapter("m", host="http://127.0.0.1:9", timeout=2).generate([{"role": "user", "content": "hi"}])
     assert g.text is None and "Cannot reach Ollama" in g.error
+
+
+def test_behavioral_classification_and_decided_rates():
+    from openaffect.runner import classify_check_behavior, aggregate_by_behavior
+    # Test individual classification
+    assert classify_check_behavior({"category": "explicit_boundary"}, {"check_type": "no_unsupported_emotion_claim"}) == "unsupported_emotion_attribution"
+    assert classify_check_behavior({"category": "explicit_boundary", "variant": "with_boundary"}, {"check_type": "forbidden_patterns"}) == "boundary_respect"
+    assert classify_check_behavior({"category": "user_correction"}, {"check_type": "forbidden_patterns"}) == "context_adaptation"
+    assert classify_check_behavior({"category": "direct_technical"}, {"check_type": "required_patterns"}) == "task_responsiveness"
+    assert classify_check_behavior({"category": "direct_technical"}, {"check_type": "max_words"}) == "task_responsiveness"
+    # Unclassified check returns None (safeguard 3)
+    assert classify_check_behavior({"category": "conflicting_signals"}, {"check_type": "manual_review"}) is None
+
+    # Test zero decided checks returns None pass_rate (safeguard 4)
+    entries = [{
+        "category": "conflicting_signals",
+        "results": [{"check_type": "no_unsupported_emotion_claim", "status": "inconclusive"}]
+    }]
+    behav = aggregate_by_behavior(entries)
+    assert behav["unsupported_emotion_attribution"]["pass_rate"] is None
+    assert behav["unsupported_emotion_attribution"]["inconclusive"] == 1
+
+
+def test_compare_reports_logic():
+    from openaffect.runner import compare_reports
+    scs = load_scenarios(CORE)
+    rep_a = run_scenarios(scs, FakeAdapter("Use pandoc. Bring your ID and licence. A written spec please."), "core.jsonl")
+    rep_b = run_scenarios(scs, FakeAdapter("Don't worry, it's okay! We will figure it out."), "core.jsonl")
+    comp = compare_reports(rep_a, rep_b)
+
+    assert comp["type"] == "comparison"
+    assert len(comp["models"]) == 2
+    # Ensure no single emotional-intelligence score exists
+    assert "emotional_intelligence" not in comp
+    assert "score" not in comp
+    assert "disclaimer" in comp and "not a measure of emotional intelligence" in comp["disclaimer"]
+
+    # Verify behavioral breakdown presence
+    for dim in ("task_responsiveness", "unsupported_emotion_attribution", "boundary_respect", "context_adaptation"):
+        assert dim in comp["by_behavior"]
+
+
+def test_compare_cli_command(tmp_path):
+    out = tmp_path / "comp.json"
+    code = main(
+        ["compare", "--models", "fake-a", "fake-b", "--output", str(out), "--scenarios", str(CORE)],
+        adapter_factory=lambda model, **kw: FakeAdapter("Use pandoc. ID and written spec.") if "a" in model else FakeAdapter("Don't worry!"),
+    )
+    assert code == 0
+    assert out.exists()
+
+    rep = load_report(out)
+    assert rep["type"] == "comparison"
+    text = render_text(rep)
+    assert "OpenAffect comparison:" in text
+    assert "OVERALL COMPARISON:" in text
+    assert "BEHAVIORAL DIMENSIONS" in text
+    assert "SCENARIO CATEGORIES" in text
+    # Verify report CLI command handles comparison report cleanly
+    assert main(["report", "--input", str(out)]) == 0
+
+
+def test_compare_cli_handles_errors(tmp_path):
+    out = tmp_path / "comp_err.json"
+    code = main(
+        ["compare", "--models", "fake-a", "fake-b", "--output", str(out), "--scenarios", str(CORE)],
+        adapter_factory=lambda model, **kw: FakeAdapter(error="connection refused"),
+    )
+    # Both failed completely -> exit code 2
+    assert code == 2
+    rep = load_report(out)
+    assert rep["type"] == "comparison"
